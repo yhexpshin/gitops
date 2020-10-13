@@ -20,33 +20,7 @@ spec:
         ports:
         - containerPort: 8080
   strategy:
-    blueGreen: 
+    blueGreen:
       activeService: rollout-bluegreen-active
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: false
-
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: rollout-bluegreen-active
-spec:
-  selector:
-    app: rollout-bluegreen
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
-
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: rollout-bluegreen-preview
-spec:
-  selector:
-    app: rollout-bluegreen
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080

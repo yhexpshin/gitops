@@ -30,7 +30,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: canary-stable
+  name: canary-service
 spec:
   selector:
     app: canary

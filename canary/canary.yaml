@@ -24,7 +24,7 @@ spec:
       maxSurge: "50%"
       maxUnavailable: 0
       steps:
-      - setWeight: 50
+      - setWeight: 10
       - pause: {}
 ---
 kind: Service

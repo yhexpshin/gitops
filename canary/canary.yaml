@@ -26,8 +26,8 @@ spec:
       steps:
       - setWeight: 10
       - pause: {}
-      canaryService: string
-      stableService: string
+      canaryService: canary-canary
+      stableService: canary-stable
 
 ---
 kind: Service

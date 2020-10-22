@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: canary
+  name: canary-rollout
 spec:
   replicas: 5
   revisionHistoryLimit: 2
@@ -14,7 +14,7 @@ spec:
         app: canary
     spec:
       containers:
-      - name: rollouts-demo
+      - name: canary-rollouts-demo
         image: particule/simplecolorapi:1.0
         imagePullPolicy: Always
         ports:
